@@ -1,13 +1,17 @@
 ;(function(){
     const $btnAjuda = document.querySelector('#btnAjuda')
-
+    
     $btnAjuda.addEventListener('click', () => {
-        const ajudas = ['teste 1',
-                        'teste 2',
-                        'teste 3']
-    ajudas.forEach(ajuda => alert(ajuda))
-    console.log(ajudas)
+        const ajudas = [
+            {msg: 'Ajuda 1', cor: 'lime'},
+            {msg: 'Ajuda 2', cor: 'orange'},
+            {msg: 'Ajuda 3', cor: 'silver'},
+            {msg: 'Ajuda 4', cor: 'pink'},
+            {msg: 'Ajuda 5', cor: 'brown'}
+        ]
+        ajudas.forEach(ajuda => alert(ajuda))
+        console.log(ajudas)
     })
-
+    
     $btnAjuda.classList.remove('no-js')
 })()
