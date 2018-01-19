@@ -1,20 +1,20 @@
-(function () {
+// (function () {
 
     
-    const btnRemove = document.querySelectorAll('.opcoesDoCartao-remove');
-    btnRemove.forEach(element => {
-        element.addEventListener('click', removeCartao);
-    });
+//     const btnRemove = document.querySelectorAll('.opcoesDoCartao-remove');
+//     btnRemove.forEach(element => {
+//         element.addEventListener('click', removeCartao);
+//     });
 
-    function removeCartao(){
+//     function removeCartao(){
         
-        const cartao = this.parentNode.parentNode;
+//         const cartao = this.parentNode.parentNode;
         
-        cartao.classList.add('cartao--some');
+//         cartao.classList.add('cartao--some');
         
-        cartao.addEventListener('transitionend', function(){
-            cartao.remove()
-        })
+//         cartao.addEventListener('transitionend', function(){
+//             cartao.remove()
+//         })
         
-    }
-})()
+//     }
+// })()
