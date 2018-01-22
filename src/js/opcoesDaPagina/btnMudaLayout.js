@@ -1,0 +1,35 @@
+(function (){
+
+    const btn = document.querySelector('#btnMudaLayout');
+    
+    function mudaTexto() {
+        if(this.textContent == "Blocos"){
+            this.textContent = "Linhas";
+        }else{
+            this.textContent = "Blocos";
+            
+        }
+    }
+    
+    btn.addEventListener('click', mudaTexto)
+    
+    
+    
+    const mural = document.querySelector('.mural');
+        
+    function mudaLayout(){
+        if(mural.classList.contains('mural--linha')){
+            mural.classList.remove('mural--linha');
+        }else{
+            mural.classList.add('mural--linha');
+        }
+    }
+    btn.addEventListener('click', mudaLayout)
+
+
+    btn.classList.remove('no-js');
+
+
+
+
+})()
