@@ -24,10 +24,6 @@
 	animation: rodaRodaJequiti .5s linear infinite;
 }
 
-/* .botaoSync--sincronizado {
-	background: #39B5AC;
-} */
-
-.botaoSync--deuBom{
+.botaoSync--deuBom {
 	background: #39B5AC;
 }
