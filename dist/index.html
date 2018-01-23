@@ -32,7 +32,7 @@
         <button id="btnAjuda" class="opcoesDaPagina-opcao no-js opcoesDaPagina-botao">
           ?
         </button>
-        <button id="btnSync" class="opcoesDaPagina-opcao no-js opcoesDaPagina-botao botaoSync botaoSync--sincronizado">
+        <button id="btnSync" class="opcoesDaPagina-opcao no-js opcoesDaPagina-botao botaoSync">
           <svg class="botaoSync-icone">
             <use xlink:href="#iconeSincronizar"></use>
           </svg>
@@ -50,11 +50,15 @@
 
     </section>
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script src="./js/polyfill/index.js"></script>
+    <script>keyboardeventKeyPolyfill.polyfill();</script>
     <script src="./js/opcoesDaPagina/btnMudaLayout.js"></script>
     <script src="./js/opcoesDoCartao/remove.js"></script>
     <script src="./js/formNovoCartao.js"></script>
     <script src="./js/mural.js"></script>
     <script src="./js/opcoesDaPagina/btnAjuda.js"></script>
+    <script src="./js/opcoesDaPagina/btnSync.js"></script>
   </body>
 </html>

@@ -3,9 +3,13 @@
 
     // ${ cor ? '' : 'checked' }
     let contador = document.querySelectorAll('.cartao').length
+
+    const listaCartoes = []
     
                                 // Parametro padrao: Default parameters
-    function criarCartao(conteudo, cor = '') {
+    function criarCartao({conteudo, cor = ''}) {
+
+        listaCartoes.push({conteudo, cor})
         contador++
         // console.log('Criar cartao em construção', conteudo)
     
@@ -92,5 +96,7 @@
     }
     
     window.criarCartao = criarCartao
+
+    window.listaCartoes = listaCartoes
     
     })(jQuery)

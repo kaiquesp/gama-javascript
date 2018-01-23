@@ -10,10 +10,30 @@
     // Dev
     // Cadastrar um evento: Event Listener
     $btnAjuda.addEventListener('click', function () {
-        var ajudas = [{ msg: 'Voce pode add cartao', cor: 'pink' }, { msg: 'Remover cartao', cor: 'lime' }, { msg: 'Mudar a cor', cor: 'orange' }, { msg: 'Você pode arrumar a coluna', cor: 'silver' }, { msg: '"Acessivelzaodaporra"', cor: 'white' }];
+        // const ajudas = [
+        //         {msg: 'Voce pode add cartao', cor: 'pink'},
+        //         {msg: 'Remover cartao', cor: 'lime'},
+        //         {msg: 'Mudar a cor', cor: 'orange'},
+        //         {msg: 'Você pode arrumar a coluna', cor: 'silver'},
+        //         {msg: '"Acessivelzaodaporra"', cor: 'white'}
+        //     ]
 
-        ajudas.reverse().forEach(function (ajuda) {
-            return criarCartao(ajuda.msg, ajuda.cor);
+        var xhr = new XMLHttpRequest();
+
+        xhr.open("GET", "http://ceep.herokuapp.com/cartoes/instrucoes");
+
+        xhr.send();
+
+        xhr.responseType = "json";
+
+        xhr.addEventListener("load", function () {
+            // const textao = xhr.response
+
+            var ajudas = xhr.response.instrucoes;
+
+            ajudas.reverse().forEach(function (ajuda) {
+                return criarCartao(ajuda);
+            });
         });
 
         // Implementação do "forEach"

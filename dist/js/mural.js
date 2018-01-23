@@ -5,10 +5,16 @@
     // ${ cor ? '' : 'checked' }
     var contador = document.querySelectorAll('.cartao').length;
 
-    // Parametro padrao: Default parameters
-    function criarCartao(conteudo) {
-        var cor = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+    var listaCartoes = [];
 
+    // Parametro padrao: Default parameters
+    function criarCartao(_ref) {
+        var conteudo = _ref.conteudo,
+            _ref$cor = _ref.cor,
+            cor = _ref$cor === undefined ? '' : _ref$cor;
+
+
+        listaCartoes.push({ conteudo: conteudo, cor: cor });
         contador++;
         // console.log('Criar cartao em construção', conteudo)
 
@@ -67,4 +73,6 @@
     }
 
     window.criarCartao = criarCartao;
+
+    window.listaCartoes = listaCartoes;
 })(jQuery);
